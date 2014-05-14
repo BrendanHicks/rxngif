@@ -1,0 +1,17 @@
+<div>
+  <a href="http://localhost:3000/new_picture_form">Create New Picture</a>
+</div>
+
+
+
+<% @picture_table.each do |picture| %>
+
+<div>
+  <a href="http://localhost:3000/picture_details/<%= picture.id %>"><img src="<%= picture.source %>" align="middle" height="150" width="200"></a>
+</div>
+
+<div>
+  <a href="http://localhost:3000/picture_details/<%= picture.id %>"><%= picture.caption %></a>
+</div>
+
+<% end %>
